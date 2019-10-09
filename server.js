@@ -24,7 +24,7 @@ app.use('/', getHomePage);
 app.use('/search',getSearch);
 
 // set the app to listen on the port
-/*
-app.listen(port, () => {
-    console.log(`Server running on port: ${port}`);
-});*/
+
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running`);
+});
