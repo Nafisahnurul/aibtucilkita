@@ -6,7 +6,6 @@ const app = express();
 
  const getHomePage = require('./routes/index.js');
  const getSearch = require('./routes/search.js');
-//const port = 5000;
 
 
 // configure middleware
@@ -23,13 +22,7 @@ app.use(fileUpload()); // configure fileupload
 app.use('/', getHomePage);
 app.use('/search',getSearch);
 
-// set the app to listen on the port
-/*
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running`);
-});
-*/
 
-app.listen(process.env.PORT || 3120, function (req, res) {
+app.listen(process.env.PORT, function (req, res) {
     console.log("App is running");
 })
