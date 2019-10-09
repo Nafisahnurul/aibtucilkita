@@ -6,7 +6,7 @@ const app = express();
 
  const getHomePage = require('./routes/index.js');
  const getSearch = require('./routes/search.js');
-const port = 5000;
+//const port = 5000;
 
 
 // configure middleware
