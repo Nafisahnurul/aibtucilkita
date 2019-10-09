@@ -9,7 +9,7 @@ const app = express();
 
 
 // configure middleware
-app.set('port', process.env.port || port); // set express to use this port
+//app.set('port', process.env.port || port); // set express to use this port
 app.set('views', __dirname + '/views'); // set express to look in this folder to render our view
 app.set('view engine', 'ejs'); // configure template engine
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,6 +23,6 @@ app.use('/', getHomePage);
 app.use('/search',getSearch);
 
 
-app.listen(process.env.PORT, function (req, res) {
+app.listen(process.env.PORT || 5000, function (req, res) {
     console.log("App is running");
 })
