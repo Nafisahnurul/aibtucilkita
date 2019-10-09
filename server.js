@@ -23,6 +23,6 @@ app.use('/', getHomePage);
 app.use('/search',getSearch);
 
 
-app.listen(process.env.PORT || 5000, function (req, res) {
+app.listen(process.env.PORT, function (req, res) {
     console.log("App is running");
 })
